@@ -1,10 +1,13 @@
 package ss100_demo;
 
+import ss3_method.Demo;
+
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        displayMenu();
+
     }
 
     public static void displayMenu() {
