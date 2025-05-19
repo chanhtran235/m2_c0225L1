@@ -1,16 +1,14 @@
-package ss100_demo;
+package ss4_class_object;
 
-import ss3_method.Demo;
-
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
-        displayMenu();
+       displayMenu();
     }
-
     public static void displayMenu() {
+        StudentManagement studentManagement = new StudentManagement();
         final int DISPLAY =1;
         final int ADD =2;
         final int DELETE =3;
@@ -28,10 +26,20 @@ public class Main {
             switch (choose) {
                 case DISPLAY:
                     System.out.println("Danh sách");
-                    // chức hiển thị
+                    // gọi phương thức display của đối tượng StudentManagerment
+                    studentManagement.display();
                     break;
                 case ADD:
                     System.out.println("Thêm mới");
+                    System.out.println("nhập id");
+                    int id = Integer.parseInt(scanner.nextLine());
+                    System.out.println("nhập tên");
+                    String name = scanner.nextLine();
+                    System.out.println("nhập địa chỉ");
+                    String address = scanner.nextLine();
+                    Student student = new Student(id,name,address);
+                    studentManagement.add(student);
+                    System.out.println("thêm mới thành công");
                     break;
                 case DELETE:
                     System.out.println("Xoá");
@@ -47,4 +55,3 @@ public class Main {
 
     }
 }
-
