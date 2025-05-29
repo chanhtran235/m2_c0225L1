@@ -1,6 +1,8 @@
 package ss4_class_object;
 
-public class Student {
+import java.util.Objects;
+
+public class Student implements Comparable<Student> {
     // thuộc tính
    private int id; // global / instance
     private String name;
@@ -47,6 +49,18 @@ public class Student {
         System.out.println(this.name + "  đang học môn :"+ subject);
     }
 
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        Student student = (Student)o;
+//        return this.id == student.id;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(id);
+//    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -54,6 +68,11 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.id-o.getId();
     }
 }
 
