@@ -5,6 +5,5 @@ public class Main {
      // ép kiểu ngầm định
         Person[] people = new Person[10];
         Ministry ministry = new Ministry();
-        ministry.method1();
     }
 }
