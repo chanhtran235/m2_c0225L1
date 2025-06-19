@@ -12,11 +12,22 @@ public class Main {
         cart.put(new Product(2,"nokia"),20);
         cart.put(new Product(3,"iphone"),30);
         cart.put(new Product(1,"ss"),100);
-        // duyet map
+//         duyet map
         Set<Product> keySet = cart.keySet();
         for (Product p: keySet) {
-            System.out.println(p.getName() +":"+cart.get(p));
+            System.out.println(p +":"+cart.get(p));
         }
+
+//        Set<Product> productSet = new TreeSet<>();
+//        productSet.add(new Product(1,"ss1"));
+//        productSet.add(new Product(3,"ss3"));
+//        productSet.add(new Product(2,"ss2"));
+//        productSet.add(new Product(1,"ss1"));
+//
+//        for (Product p : productSet) {
+//            System.out.println(p);
+//        }
+
 
 //        List<Product> products = new ArrayList<>();
 //        products.add(new Product(7,"Bsamsung"));

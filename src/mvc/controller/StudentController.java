@@ -39,6 +39,14 @@ public class StudentController {
                     System.out.println("Thêm mới thành công");
                     break;
                 case 3:
+                    System.out.println("Nhập mã sinh viên cần xoá");
+                    int code = Integer.parseInt(scanner.nextLine());
+                    boolean isDelete = studentService.deleteById(code);
+                    if (isDelete){
+                        System.out.println("Xoá thành công");
+                    }else {
+                        System.out.println("Không tìm thấy mã");
+                    }
                     // xoá
                     break;
                 case 4:

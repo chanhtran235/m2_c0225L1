@@ -9,6 +9,11 @@ public class Student extends Person {
     public Student() {
     }
 
+    @Override
+    public String getInfoToCSV() {
+        return null;
+    }
+
     public Student(long code, String name, String address, float point, String className) {
         super(code, name, address);
         this.point = point;

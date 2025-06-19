@@ -7,6 +7,12 @@ public class Student extends Person {
     public Student() {
     }
 
+    @Override
+    public String getInfoToCSV() {
+        return this.getCode()+"," + this.getName()
+                + ","+this.getAddress()+","+this.getPoint()+","+this.getClassName() ;
+    }
+
     public Student(long code, String name, String address, float point, String className) {
         super(code, name, address);
         this.point = point;
